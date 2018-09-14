@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:statisticsapp/screens/statsscreen.dart';
+import 'package:statisticsapp/screens/loginscreen.dart';
 
 void main() => runApp(new MyApp());
 
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new StatsScreen(title: 'Super Statistics App'),
+      home: new LoginScreen(title: 'Centiro Statistics'),
     );
   }
 }
