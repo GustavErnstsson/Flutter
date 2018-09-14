@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:statisticsapp/screens/dashboard_screen.dart';
+import 'package:flutter/services.dart';
 // class LoginScreen extends StatefulWidget {
 //   final string title;
   
@@ -18,6 +19,10 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+        DeviceOrientation.portraitUp,
+        DeviceOrientation.portraitDown,
+      ]);
     var assetImage = new AssetImage('assets/cLogo.png');
     var image = new Image(image: assetImage, width: 80.0, height: 80.0);
     return Scaffold(
