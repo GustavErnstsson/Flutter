@@ -1,7 +1,22 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+<<<<<<< HEAD:lib/screens/login_screen.dart
 import 'package:statisticsapp/config/application.dart';
+import 'package:statisticsapp/config/routes.dart';
+=======
+import 'package:statisticsapp/screens/dashboard_screen.dart';
+import 'package:flutter/services.dart';
+// class LoginScreen extends StatefulWidget {
+//   final string title;
+  
+//   LoginScreen({Key key, this.title}) : super(key:key)
+
+//   @override
+//   State<
+// }
+
+// class LoginState<
+>>>>>>> 290d4b5533125afee1aa16b74c606d9e42850a48:lib/screens/login_screen.dart
 
 class LoginScreen extends StatelessWidget {
   final String title;
@@ -20,12 +35,20 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
+<<<<<<< HEAD:lib/screens/login_screen.dart
+        child: loginBody(context, image),
+=======
         child: loginBody(image,context),
+>>>>>>> 290d4b5533125afee1aa16b74c606d9e42850a48:lib/screens/login_screen.dart
       ),
     );
   }
 
+<<<<<<< HEAD:lib/screens/login_screen.dart
+  loginBody(context, image) => Column(
+=======
   loginBody(image,context) => Column(
+>>>>>>> 290d4b5533125afee1aa16b74c606d9e42850a48:lib/screens/login_screen.dart
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[loginHeader(image), loginFields(context)],
       );
@@ -51,7 +74,11 @@ class LoginScreen extends StatelessWidget {
         ],
       );
 
+<<<<<<< HEAD:lib/screens/login_screen.dart
+  loginFields(BuildContext context) => Container(
+=======
   loginFields(context) => Container(
+>>>>>>> 290d4b5533125afee1aa16b74c606d9e42850a48:lib/screens/login_screen.dart
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           mainAxisSize: MainAxisSize.min,
@@ -92,6 +119,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 color: Colors.red,
                 onPressed: () {
+<<<<<<< HEAD:lib/screens/login_screen.dart
 
                   AppRouter().router.navigateTo(
                     context, 
@@ -99,6 +127,12 @@ class LoginScreen extends StatelessWidget {
                     transition: TransitionType.inFromRight
                   );
 
+=======
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DashboardScreen()),
+                  );
+>>>>>>> 290d4b5533125afee1aa16b74c606d9e42850a48:lib/screens/login_screen.dart
                 },
               ),
             ),
