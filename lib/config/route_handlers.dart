@@ -1,9 +1,10 @@
+import 'package:statisticsapp/screens/login_screen.dart';
 import '../screens/dashboard_screen.dart';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 
 var rootHandler = new Handler(handlerFunc: (BuildContext context, Map<String, List<String>> params) {
-  return new DashboardScreen();
+  return new LoginScreen(title: 'Centiro Statistics');
 });
 
 var dashboardHandler = new Handler(handlerFunc: (BuildContext context, Map<String, List<String>> params) {

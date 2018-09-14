@@ -10,19 +10,17 @@ import 'package:flutter/material.dart';
 import './route_handlers.dart';
 
 class Routes {
-  static String root = "/";
-  static String dashboard = "/dashboard";
-  static String projectStats = "/projectstats";
-  static String about = "/about";
-
+  
   static void configureRoutes(Router router) {
-    router.notFoundHandler = new Handler(
-        handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+    
+    router.notFoundHandler = new Handler( handlerFunc: (BuildContext context, Map<String, List<String>> params) {
       print("Unable to find route");
     });
-    router.define(root, handler: rootHandler);
-    router.define(dashboard, handler: dashboardHandler);
-    // router.define(projectStats, handler: projectStatsHandler);
-    // router.define(about, handler: aboutHandler);
+
+    router.define("/", handler: rootHandler);
+    router.define("/dashboard", handler: dashboardHandler);
+
+    // router.define("/projectstats", handler: projectStatsHandler);
+    // router.define("/about", handler: aboutHandler);
   }
 }

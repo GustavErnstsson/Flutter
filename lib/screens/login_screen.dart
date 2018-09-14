@@ -1,20 +1,13 @@
+import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-
-// class LoginScreen extends StatefulWidget {
-//   final string title;
-  
-//   LoginScreen({Key key, this.title}) : super(key:key)
-
-//   @override
-//   State<
-// }
-
-// class LoginState<
+import 'package:statisticsapp/config/application.dart';
+import 'package:statisticsapp/config/routes.dart';
 
 class LoginScreen extends StatelessWidget {
   final String title;
 
   LoginScreen({Key key, this.title}) : super(key : key);
+  
 
   @override
   Widget build(BuildContext context) {
@@ -23,14 +16,14 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: loginBody(image),
+        child: loginBody(context, image),
       ),
     );
   }
 
-  loginBody(image) => Column(
+  loginBody(context, image) => Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[loginHeader(image), loginFields()],
+        children: <Widget>[loginHeader(image), loginFields(context)],
       );
 
   loginHeader(image) => Column(
@@ -54,7 +47,7 @@ class LoginScreen extends StatelessWidget {
         ],
       );
 
-  loginFields() => Container(
+  loginFields(BuildContext context) => Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           mainAxisSize: MainAxisSize.min,
@@ -94,7 +87,15 @@ class LoginScreen extends StatelessWidget {
                   style: TextStyle(color: Colors.white),
                 ),
                 color: Colors.red,
-                onPressed: () {},
+                onPressed: () {
+
+                  AppRouter().router.navigateTo(
+                    context, 
+                    "/dashboard", 
+                    transition: TransitionType.inFromRight
+                  );
+
+                },
               ),
             ),
             SizedBox(
