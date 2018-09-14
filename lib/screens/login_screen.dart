@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:statisticsapp/screens/dashboard_screen.dart';
 // class LoginScreen extends StatefulWidget {
 //   final string title;
   
@@ -23,14 +23,14 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: loginBody(image),
+        child: loginBody(image,context),
       ),
     );
   }
 
-  loginBody(image) => Column(
+  loginBody(image,context) => Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[loginHeader(image), loginFields()],
+        children: <Widget>[loginHeader(image), loginFields(context)],
       );
 
   loginHeader(image) => Column(
@@ -54,7 +54,7 @@ class LoginScreen extends StatelessWidget {
         ],
       );
 
-  loginFields() => Container(
+  loginFields(context) => Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           mainAxisSize: MainAxisSize.min,
@@ -94,7 +94,12 @@ class LoginScreen extends StatelessWidget {
                   style: TextStyle(color: Colors.white),
                 ),
                 color: Colors.red,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DashboardScreen()),
+                  );
+                },
               ),
             ),
             SizedBox(
