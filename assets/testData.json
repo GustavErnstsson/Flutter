@@ -3,13 +3,13 @@
 			"Name": "Johan",
 			"Projects": [{
 					"Name": "C3Web",
-					"StartTime": "2018-09-01T00:00:00",
-					"FinishedTime": "2018-09-14T00:00:00",
+					"StartTime": "2018-09-01 00:00:00",
+					"FinishedTime": "2018-09-14 00:00:00",
 					"TotalHours": 100
 				}, {
 					"Name": "Event Administration",
-					"StartTime": "2018-09-08T00:00:00",
-					"FinishedTime": "2018-09-15T00:00:00",
+					"StartTime": "2018-09-08 00:00:00",
+					"FinishedTime": "2018-09-15 00:00:00",
 					"TotalHours": 25
 				}
 			]
@@ -17,13 +17,13 @@
 			"Name": "Pierre",
 			"Projects": [{
 					"Name": "Mario Kart",
-					"StartTime": "2018-08-14T00:00:00",
-					"FinishedTime": "2018-09-14T00:00:00",
+					"StartTime": "2018-08-14 00:00:00",
+					"FinishedTime": "2018-09-14 00:00:00",
 					"TotalHours": 300
 				}, {
 					"Name": "Cops",
-					"StartTime": "2018-09-015T00:00:00",
-					"FinishedTime": "2018-09-15T00:00:00",
+					"StartTime": "2018-09-015 00:00:00",
+					"FinishedTime": "2018-09-15 00:00:00",
 					"TotalHours": 1
 				}
 			]
@@ -31,13 +31,13 @@
 			"Name": "Gustav",
 			"Projects": [{
 					"Name": "Freight Calculation",
-					"StartTime": "2018-09-01T00:00:00",
-					"FinishedTime": "2018-09-14T00:00:00",
+					"StartTime": "2018-09-01 00:00:00",
+					"FinishedTime": "2018-09-14 00:00:00",
 					"TotalHours": 85
 				}, {
 					"Name": "Stand In DM",
-					"StartTime": "2018-09-07T00:00:00",
-					"FinishedTime": "2018-09-14T00:00:00",
+					"StartTime": "2018-09-07 00:00:00",
+					"FinishedTime": "2018-09-14 00:00:00",
 					"TotalHours": 40
 				}
 			]
