@@ -1,26 +1,32 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
 import '../model/user.dart';
 import '../model/users.dart';
 
+import 'package:http/http.dart' as http;
+
 class Userfetcher{
-  final String _filePath = "//centiro.se/Internal/Temp/flutter/TestData.json";
+  final String _filePath = "https://raw.githubusercontent.com/GustavErnstsson/Flutter/master/assets/testData.json";
   final int cacheTimeInMinutes;
 
   DateTime _lastReload = DateTime.now();
   Users _users;
 
-  Userfetcher({this.cacheTimeInMinutes: 2}){
+  Userfetcher({this.cacheTimeInMinutes: 1}){
     loadAllUserData();
   }
 
-  void loadAllUserData(){
-    File file = new File(_filePath);
-    String fileContent = file.readAsStringSync(encoding: Encoding.getByName("UTF8"));
+  Future loadAllUserData() async {
+    final response = await http.get(_filePath);
     
-    _users = Users.fromJson(json.decode(fileContent));
-    _lastReload = DateTime.now();
+    if (response.statusCode == 200) {
+      _users = Users.fromJson(json.decode(response.body));
+      _lastReload = DateTime.now();
+    } else {
+      throw Exception('Failed to load post');
+    }
   }
 
   bool isUserLoaded(String name){

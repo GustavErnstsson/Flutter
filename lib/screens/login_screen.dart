@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:statisticsapp/config/application.dart';
 
+import '../controller/userfetcher.dart';
+
 class LoginScreen extends StatelessWidget {
   final String title;
 
@@ -94,11 +96,20 @@ class LoginScreen extends StatelessWidget {
                   style: TextStyle(color: Colors.white),
                 ),
                 color: Colors.red,
-                onPressed: () {
+                onPressed: () async {
                   
-                  print("Username: ${_userTextController.text}");
+                  var datafecther = new Userfetcher();
+                  await datafecther.loadAllUserData();
 
+                  if(datafecther.isUserLoaded(_userTextController.text)){
+                    AppRouter().router.navigateTo(
+                      context, "/dashboard", 
+                      transition: TransitionType.inFromRight
+                    );
+                  }
+                  else{
 
+                  }
                 },
               ),
             ),

@@ -9,10 +9,10 @@ class Project{
     factory Project.fromJson(Map<String, dynamic> json){
       
       return Project(
-        startTime: DateTime.parse(json['startTime']),
-        finishedTime: DateTime.parse(json['finishedTime']),
-        name: json['name'],
-        hoursSpent: int.parse(json['totalHours'])
+        startTime: DateTime.parse(json['StartTime']),
+        finishedTime: DateTime.parse(json['FinishedTime']),
+        name: json['Name'],
+        hoursSpent: json['TotalHours']
       );
   }
 }

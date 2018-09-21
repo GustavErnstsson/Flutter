@@ -19,7 +19,7 @@ class Users {
   }
 
   factory Users.fromJson(Map<String, dynamic> json){
-    var list = json['users'] as List;
+    var list = json['Users'] as List;
     List<User> userList = list.map((i) => User.fromJson(i)).toList();
 
     return Users(users: userList);
