@@ -6,6 +6,8 @@ import 'package:statisticsapp/config/application.dart';
 class LoginScreen extends StatelessWidget {
   final String title;
 
+  final TextEditingController _userTextController = new TextEditingController();
+
   LoginScreen({Key key, this.title}) : super(key : key);
   
 
@@ -64,6 +66,7 @@ class LoginScreen extends StatelessWidget {
                   hintText: "Enter your username",
                   labelText: "Username",
                 ),
+                controller: _userTextController,
               ),
             ),
             Container(
@@ -92,12 +95,9 @@ class LoginScreen extends StatelessWidget {
                 ),
                 color: Colors.red,
                 onPressed: () {
+                  
+                  print("Username: ${_userTextController.text}");
 
-                  AppRouter().router.navigateTo(
-                    context, 
-                    "/dashboard", 
-                    transition: TransitionType.inFromRight
-                  );
 
                 },
               ),
