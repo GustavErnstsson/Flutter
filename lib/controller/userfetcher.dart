@@ -15,7 +15,7 @@ class Userfetcher{
   Users _users;
 
   Userfetcher({this.cacheTimeInMinutes: 1}){
-    loadAllUserData();
+    //loadAllUserData();
   }
 
   Future loadAllUserData() async {
